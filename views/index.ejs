@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title><%= title %></title>
+<meta  charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="header">
+    <div class="u-centered">
+        <div class="front-box">
+        <h1 class="front-box__title"><%= title %></h1>
+        <p class="front-box__desc">
+            Witaj w wypożyczalni <%= title %> usiądz i rozgość się w jachtcie swoich marzeń
+        </p>
+        <button class="front-box__button" type="button" onclick="goTo('/rezerwacja');" >Wypożycz teraz!</button>
+        </div>
+        </div>
+</header>
+<div class="bar bar--bg">
+<div class="bar__top u-centered">
+    <image onclick="goTo('/');" class="bar__logo" src="images/8091-200.png" alt="<%= title %>"/>
+    <input type="checkbox" id="NavToggle">
+    <label class="bar__NavToggle" for="NavToggle">
+        <i class="material-icons">menu</i>
+    </label>
+    <nav class="nav">
+        <a class="nav__link" href="rezerwacja">Rezerwacja</a>
+        <a class="nav__link" href="kontakt">Kontakt</a>
+    </nav>
+</div>
+
+</div>
+<main class="d-centered" >
+    <p>
+        <%= title %> CREATED BY <%= Createdby %> IN 2022
+    </p>
+</main>
+
+    <script src="js/functions.js"></script>
+
+</body>
+</html>

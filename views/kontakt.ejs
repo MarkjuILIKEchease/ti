@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title><%= title %></title>
+    <meta  charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="header">
+    <div class="u-centered">
+        <div class="front-box">
+            <h1 class="front-box__title"><%= title %></h1>
+            <p class="front-box__desc">
+            <h3>Witaj w wypożyczalni <%= title %></h3>
+            <h4> Możesz nas znaleźć</h4>
+                Adres: <%= adres1 %> <br>
+                Telefon: <%= tel1 %> <br>
+                email: <%= email1 %> <br><br>
+            <h4>  Adres fili morskiej </h4>
+                Adres: <%= adres2 %> <br>
+                Telefon: <%= tel2 %> <br>
+                email: <%= email2 %> <br>
+            </p>
+            <div id="form"  id="frontbox_confirmation">
+            <form class="front-box__form" onsubmit="return false" id="form">
+                <label  for="lastName">Nazwisko</label>
+                <input class="front-box-input__form" type="text" placeholder="Nazwisko" id="lastName" />
+                <br><br>
+                <label for="firstName">Imie</label>
+                <input class="front-box-input__form" class="frontbox_input" type="text" placeholder="Imie" id="firstName" />
+                <br><br>
+                <input  class="front-box-input__desc" type="radio" id="Freshwater" name="yacht-type" value="Freshwater"> żegluga słodkowodna
+                <input  class="front-box-input__desc" type="radio" id="Marine" name="yacht-type" value="Marine"> żegluga morska
+                <input  class="front-box-input__desc" type="radio" id="other" name="yacht-type" value="other" checked="checked"> inne
+                <br><br>
+                <label for="email">Email</label>
+                <input class="front-box-input__form"  type="email" placeholder="Podaj Email" id="email" /><br><br>
+                <label for="phone">Telefon</label>
+                <input class="front-box-input__form" type="tel" placeholder="Telefon" id="phone" /><br><br>
+                <label for="question">Pytanie</label>
+                <input class="front-box-input__form" type="text" placeholder="Twoje zapytanie" id="question" /><br><br>
+                <br>
+                <button class="front-box__button" type="button" onclick="sendContact();">Wyślij zapytanie</button>
+            </form>
+
+
+            </div>
+        </div>
+    </div>
+</header>
+<div class="bar bar--bg">
+    <div class="bar__top u-centered">
+        <image onclick="goTo('/');" class="bar__logo" src="images/8091-200.png" alt="<%= title %>"/>
+        <input type="checkbox" id="NavToggle">
+        <label class="bar__NavToggle" for="NavToggle">
+            <i class="material-icons">menu</i>
+        </label>
+        <nav class="nav">
+            <a class="nav__link" href="rezerwacja">Rezerwacja</a>
+            <a class="nav__link" href="kontakt">Kontakt</a>
+        </nav>
+    </div>
+
+</div>
+<main class="d-centered" >
+    <p>
+        <%= title %> CREATED BY <%= Createdby %> IN 2022
+    </p>
+</main>
+<script src="js/functions.js"></script>
+</body>
+</html>
